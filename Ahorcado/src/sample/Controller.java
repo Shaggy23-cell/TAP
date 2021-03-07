@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -18,12 +19,14 @@ public class Controller {
     String[] palabras={"Pelota","Microfono","Libro", "Cuchara","Salsa","Chicharron","Mouse"};
     TextField[]arrayTxt=null;
     int contador=0;
+    int contV;
     @FXML protected void initialize(){
         Random random =new Random();
         int aleatorio= random.nextInt(6);
         String palabra=palabras[aleatorio].toLowerCase();
         System.out.println(palabra);
         arrayTxt=new TextField[palabra.length()];
+       contV= palabra.length();
         int ayuda=1;// son las letras de ayuda
 
 
@@ -43,6 +46,15 @@ public class Controller {
                 if(nombre[2].equals(textField.getText().toLowerCase())){
                     System.out.println("Correcto"+textField.getId());
                     textField.setDisable(true);
+                    contV--;
+                    if(contV==0){
+                        Alert alerta= new Alert(Alert.AlertType.INFORMATION);
+                        alerta.setTitle("Victoria");
+                        alerta.setHeaderText("Felicidades!!!");
+                        alerta.setContentText("Buen trabajo");
+                        alerta.show();
+                    }
+
                 }else{
 
                     System.out.println("Incorrecto"+textField.getId());
@@ -62,12 +74,13 @@ public class Controller {
                     }else if(contador==4){
                         pintarPieI();
                         contador++;
-                    }else{
+                    }else if(contador==5){
                         pintarPieD();
                         Alert alerta= new Alert(Alert.AlertType.INFORMATION);
                         alerta.setTitle("Game over");
                         alerta.setContentText("Mejor suerte la proxima");
                         alerta.show();
+                    }else{
 
                     }
                 }
