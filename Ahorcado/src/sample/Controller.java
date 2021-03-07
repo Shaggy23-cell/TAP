@@ -1,9 +1,11 @@
 package sample;
 
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,11 +18,16 @@ import java.util.Random;
 public class Controller {
     @FXML HBox contenedor;
     @FXML AnchorPane padre;
+    @FXML Button salir;
+    @FXML Button salir2;
+
     String[] palabras={"Pelota","Microfono","Libro", "Cuchara","Salsa","Chicharron","Mouse"};
     TextField[]arrayTxt=null;
     int contador=0;
     int contV;
     @FXML protected void initialize(){
+        salir.setVisible(false);
+        salir2.setVisible(false);
         Random random =new Random();
         int aleatorio= random.nextInt(6);
         String palabra=palabras[aleatorio].toLowerCase();
@@ -53,6 +60,7 @@ public class Controller {
                         alerta.setHeaderText("Felicidades!!!");
                         alerta.setContentText("Buen trabajo");
                         alerta.show();
+                        salir.setVisible(true);
                     }
 
                 }else{
@@ -78,9 +86,13 @@ public class Controller {
                         pintarPieD();
                         Alert alerta= new Alert(Alert.AlertType.INFORMATION);
                         alerta.setTitle("Game over");
+                        alerta.setHeaderText("LOSER");
                         alerta.setContentText("Mejor suerte la proxima");
                         alerta.show();
+                        contador++;
+                        salir2.setVisible(true);
                     }else{
+
 
                     }
                 }
@@ -89,7 +101,6 @@ public class Controller {
         });
         contenedor.getChildren().add( arrayTxt[x]);
     }
-
     }
 public void pintarCabeza(){
     ImageView cabeza=new ImageView(new Image("sample/img/cabeza.png"));
@@ -141,4 +152,10 @@ public void pintarCabeza(){
         padre.getChildren().addAll(pieDerecho);
     }
 
+    public void salirr(ActionEvent event){
+        System.exit(0);
+    }
+    public void salirr2(ActionEvent event){
+        System.exit(0);
+    }
 }
