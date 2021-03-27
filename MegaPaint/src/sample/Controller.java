@@ -11,7 +11,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-
+import javafx.scene.shape.FillRule;
+import javafx.scene.transform.Rotate;
 
 
 public class Controller {
@@ -31,7 +32,7 @@ public class Controller {
                 pintarDibujos(t1.intValue());
             }
         });
-        comboOpciones.getItems().addAll("Cuadricula","Ajedrez","Estrella","Estrella doble");
+        comboOpciones.getItems().addAll("Cuadricula","Ajedrez","Estrella","Estrella doble","circulos");
 
 
         // traer pixeles para manipularlos
@@ -52,6 +53,7 @@ public class Controller {
         
         
     }
+
     public void pintarDibujos(int valor){
         context.setFill(Color.WHITESMOKE);
         context.fillRect(0,0, lienzo.getWidth(),lienzo.getHeight());
@@ -101,9 +103,8 @@ if(comboOpciones.getSelectionModel().getSelectedIndex()==0){
     int mitadAncho=((int) lienzo.getWidth())/2;
     int mitadAlto=((int) lienzo.getHeight())/2;
     int alto= (int) lienzo.getHeight();
-context.strokeLine(mitadAncho, 0,mitadAlto,lienzo.getHeight());
+//context.strokeLine(mitadAncho, 0,mitadAlto,lienzo.getHeight());
     context.strokeLine(0, mitadAlto,lienzo.getWidth(),mitadAlto);
-
 
     for(int j=1;j<valor +1;j++){
         context.strokeLine(mitadAncho,diviciones*j,mitadAncho+(diviciones*j),mitadAlto);//1
@@ -111,7 +112,7 @@ context.strokeLine(mitadAncho, 0,mitadAlto,lienzo.getHeight());
         context.strokeLine(diviciones*j,mitadAlto,mitadAncho,mitadAlto+(diviciones*j));//3
 
 //context.strokeLine(mitadAncho,(lienzo.getWidth())-( diviciones*j),mitadAlto+(diviciones*j),mitadAlto);//4
-        //context.strokeLine(mitadAncho+(diviciones*j),mitadAlto,mitadAncho,lienzo.getHeight()-(diviciones*j));//4
+      //  context.strokeLine(mitadAncho+(diviciones*j),mitadAlto,mitadAncho,lienzo.getHeight()-(diviciones*j));//4
         context.strokeLine(mitadAncho,alto-(diviciones*j),mitadAncho+(diviciones*j),mitadAlto);//4
     }
 
@@ -130,14 +131,39 @@ context.strokeLine(mitadAncho, 0,mitadAlto,lienzo.getHeight());
 
     for (int j = 1; j < valor + 1; j++) {
         context.strokeLine(mitadAncho, diviciones * j, mitadAncho + (diviciones * j), mitadAlto);//1
-        context.strokeLine(mitadAncho, (diviciones * j), mitadAncho + (diviciones * -j), mitadAlto);//2
-        context.strokeLine(diviciones * j, mitadAlto, mitadAncho, mitadAlto + (diviciones * j));//3
-//context.strokeLine(mitadAncho,(lienzo.getWidth())-( diviciones*j),mitadAlto+(diviciones*j),mitadAlto);//4
-        //context.strokeLine(mitadAncho+(diviciones*j),mitadAlto,mitadAncho,lienzo.getHeight()-(diviciones*j));//4
-        context.strokeLine(mitadAncho, alto - (diviciones * j), mitadAncho + (diviciones * j), mitadAlto);//4
+        //  context.strokeLine(mitadAncho, (diviciones * j), mitadAncho + (diviciones * -j), mitadAlto);//2
+       // context.strokeLine(diviciones * j, mitadAlto, mitadAncho, mitadAlto + (diviciones * j));//3
+
+        //context.strokeLine(mitadAncho, alto - (diviciones * j), mitadAncho + (diviciones * j), mitadAlto);//4
 
 
     }
+
+}else if(comboOpciones.getSelectionModel().getSelectedIndex()==4) {
+//circulos
+    //context.strokeLine(lienzo.getWidth()/2,0,lienzo.getWidth()/2,lienzo.getHeight());
+   // context.strokeLine(0,lienzo.getHeight()/2,lienzo.getWidth(),lienzo.getHeight()/2);
+
+    //context.strokeOval((lienzo.getWidth()/2)-150,(lienzo.getHeight()/2)-150,300,300);
+    context.setFill(Color.BLACK);
+    double divicioness= (2*Math.PI*150)/valor;
+    double divicionesss= 360/valor;
+    double centroH= lienzo.getHeight()/2;
+    double centroW= lienzo.getWidth()/2;
+
+    for(int x=1;x<valor+1;x++){
+        for(int j=0;j<valor;j++){
+
+            context.strokeOval( (divicionesss*x),divicionesss*j,300,300);
+
+
+
+
+        }
+
+    }
+
+
 
 }
 

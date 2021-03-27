@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="700.0" onKeyPressed="#passwordAction" style="-fx-border-color: #EDE6F2; -fx-border-width: 2px;" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login.Login">
+   <children>
+      <JFXPasswordField fx:id="textFieldPassword" alignment="CENTER" focusColor="#ede6f2" focusTraversable="false" layoutX="231.0" layoutY="223.0" promptText="Password" style="-fx-text-fill: #85CB33;" styleClass="border" unFocusColor="#a8a8a8">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="textFieldUser" alignment="CENTER" focusColor="#ede6f2" layoutX="231.0" layoutY="168.0" onKeyReleased="#userAction" promptText="User" style="-fx-text-fill: #85CB33;" styleClass="border" unFocusColor="#a8a8a8">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="buttonLogin" buttonType="RAISED" layoutX="231.0" layoutY="294.0" onAction="#loginAction" styleClass="btn" text="Log in" textFill="#ede6f2">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="69.0" fitWidth="148.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Icono.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="buttonSignUp" buttonType="RAISED" layoutX="363.0" layoutY="294.0" onAction="#signupAction" styleClass="btn" text="Sign Up" textFill="#ede6f2">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <styleClass>
+      <String fx:value="fondoColor" />
+      <String fx:value="fondoImage" />
+   </styleClass>
+</AnchorPane>

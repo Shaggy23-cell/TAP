@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="500.0" minWidth="700.0" style="-fx-border-color: WHITE; -fx-border-width: 2px;" styleClass="fondoImage" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUp.SignUp">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Icono.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="textFieldUser" alignment="CENTER" focusColor="WHITE" layoutX="232.0" layoutY="145.0" onKeyPressed="#userAction" promptText="User" styleClass="txt">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldPassword" alignment="CENTER" focusColor="WHITE" layoutX="231.0" layoutY="207.0" onKeyPressed="#passwordAction" promptText="Password" styleClass="txt">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldRPassword" alignment="CENTER" focusColor="WHITE" layoutX="231.0" layoutY="254.0" onKeyPressed="#rPasswordAction" promptText="Repeat Password" styleClass="txt">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="buttonSignUp" layoutX="298.0" layoutY="316.0" onAction="#signUpAction" styleClass="btn" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

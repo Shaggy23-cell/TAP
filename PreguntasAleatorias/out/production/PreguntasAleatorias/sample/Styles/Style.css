@@ -1,0 +1,31 @@
+.fondoColor{
+
+    -fx-background-color: #0F110C;
+
+}
+
+.fondoImage{
+
+    -fx-background-image: url("../Images/Fondo3.png");
+    -fx-background-size: 100% 100%;
+
+}
+
+.border{
+
+    -fx-border-radius: 30px;
+
+}
+
+.btn{
+
+    -fx-background-color: #010101;
+    -fx-background-radius: 30px;
+
+}
+
+.txt{
+
+    -fx-text-fill: #85CB33;
+
+}
