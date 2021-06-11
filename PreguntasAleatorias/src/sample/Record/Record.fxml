@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="500.0" minWidth="700.0" styleClass="fondoImage" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Record.Record">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="19.0" layoutY="41.0" prefHeight="419.0" prefWidth="652.0" styleClass="fondoImage" vbarPolicy="NEVER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <content>
+            <VBox fx:id="vBoxRecord" alignment="CENTER" prefHeight="478.0" prefWidth="680.0" spacing="20.0" style="-fx-background-color: BLACK;" styleClass="fondoImage" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

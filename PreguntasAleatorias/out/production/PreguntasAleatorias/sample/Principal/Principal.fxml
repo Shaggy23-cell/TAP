@@ -30,6 +30,11 @@
                         <Font name="Garuda" size="15.0" />
                      </font>
                   </JFXButton>
+                  <JFXButton fx:id="buttonRecord" onAction="#recordAction" style="-fx-background-color: #111111; -fx-background-radius: 30px;" text="Record" textFill="#ede6f2">
+                     <font>
+                        <Font name="Garuda" size="15.0" />
+                     </font>
+                  </JFXButton>
                   <JFXButton fx:id="buttonExit" onAction="#exitAction" style="-fx-background-color: #111111; -fx-background-radius: 30px;" text="Exit" textFill="#ede6f2">
                      <font>
                         <Font name="Garuda" size="15.0" />

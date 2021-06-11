@@ -10,29 +10,29 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="fondoImage" stylesheets="@../Styles/Style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Question.Question">
    <children>
-      <Text fx:id="txtPregunta" fill="#ede6f2" layoutX="160.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui aparecera la pregunta" textAlignment="CENTER" wrappingWidth="679.5019226074219" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+      <Text fx:id="txtPregunta" fill="#ede6f2" layoutX="160.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here the question will appear" textAlignment="CENTER" wrappingWidth="679.5019226074219" AnchorPane.bottomAnchor="401.875" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
          <font>
             <Font name="Garuda" size="31.0" />
          </font>
       </Text>
-      <VBox alignment="CENTER" layoutX="245.0" layoutY="129.0" spacing="10.0">
+      <VBox alignment="CENTER" layoutX="154.0" layoutY="129.0" prefHeight="242.0" prefWidth="392.0" spacing="10.0" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="154.0">
          <children>
-            <JFXButton fx:id="btnR1" onAction="#r1Action" text="Respuesta 1" textFill="#85cb33">
+            <JFXButton fx:id="btnR1" alignment="CENTER" onAction="#r1Action" text="Answer 1" textFill="#85cb33">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnR2" onAction="#r2Action" text="Respuesta 2" textFill="#85cb33">
+            <JFXButton fx:id="btnR2" alignment="CENTER" onAction="#r2Action" text="Answer 2" textFill="#85cb33">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnR3" onAction="#r3Action" text="Respuesta 3" textFill="#85cb33">
+            <JFXButton fx:id="btnR3" alignment="CENTER" onAction="#r3Action" text="Answer 3" textFill="#85cb33">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnR4" onAction="#r4Action" text="Respuesta 4" textFill="#85cb33">
+            <JFXButton fx:id="btnR4" alignment="CENTER" onAction="#r4Action" text="Answer 4" textFill="#85cb33">
                <font>
                   <Font size="25.0" />
                </font>
@@ -44,17 +44,17 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="250.0" layoutY="386.0" spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <JFXButton fx:id="btnAnterior" alignment="CENTER" onAction="#anteriorAction" styleClass="btn" text="Anterior" textFill="#ede6f2">
+            <JFXButton fx:id="btnAnterior" alignment="CENTER" onAction="#anteriorAction" styleClass="btn" text="Previous" textFill="#ede6f2">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnAleatiora" alignment="CENTER" onAction="#aleatorioAction" styleClass="btn" text="Aleatoria" textFill="#ede6f2">
+            <JFXButton fx:id="btnAleatiora" alignment="CENTER" onAction="#aleatorioAction" styleClass="btn" text="Random" textFill="#ede6f2">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="btnSiguiente" alignment="CENTER" onAction="#siguienteAction" styleClass="btn" text="Siguiente" textFill="#ede6f2">
+            <JFXButton fx:id="btnSiguiente" alignment="CENTER" onAction="#siguienteAction" styleClass="btn" text="Following" textFill="#ede6f2">
                <font>
                   <Font size="15.0" />
                </font>

@@ -1,5 +1,6 @@
 package sample.Config;
 
+
         import com.jfoenix.controls.JFXButton;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
@@ -24,6 +25,12 @@ public class Config {
     @FXML private JFXButton buttonEnglish;
 
     public static int idiom = 0;
+
+    @FXML void initialize(){
+
+
+
+    }
 
     @FXML void arabicAction(ActionEvent event) throws IOException {
 

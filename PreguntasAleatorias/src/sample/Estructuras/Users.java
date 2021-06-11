@@ -1,9 +1,13 @@
 package sample.Estructuras;
 
+import java.util.LinkedList;
+
 public class Users {
 
     public String user;
     public String password;
+
+    public LinkedList<QuestionAnswered> questionAnswered = new LinkedList<>();
 
     public Users(String user, String password) {
         this.user = user;
@@ -24,5 +28,13 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public LinkedList<QuestionAnswered> getQuestionAnswered() {
+        return questionAnswered;
+    }
+
+    public void setQuestionAnswered(LinkedList<QuestionAnswered> questionAnswered) {
+        this.questionAnswered = questionAnswered;
     }
 }

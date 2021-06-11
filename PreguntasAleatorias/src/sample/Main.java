@@ -5,14 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
-
-
-
-
-
-
 
     public static Stage stage;
 
@@ -25,6 +20,7 @@ public class Main extends Application {
         primaryStage.setTitle("Questions game");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
+       // primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 

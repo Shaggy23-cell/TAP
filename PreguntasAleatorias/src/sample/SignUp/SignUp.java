@@ -1,5 +1,6 @@
 package sample.SignUp;
 
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -32,6 +33,12 @@ public class SignUp {
     boolean found = false;
     Alert alert;
 
+    @FXML void initialize(){
+
+
+
+    }
+
     @FXML void passwordAction(KeyEvent event) {
             if(event.getCode() == KeyCode.ENTER &&  !(textFieldPassword.getText().equals(""))) textFieldRPassword.requestFocus();
     }
@@ -57,6 +64,7 @@ public class SignUp {
                 if(textFieldUser.getText().equals(Login.users.get(x).getUser())){
                     alert = new Alert(Alert.AlertType.ERROR);
                     alert.setContentText("User used");
+                    alert.setHeaderText("Fail");
                     alert.setTitle("Error");
                     alert.show();
                     found = true;
@@ -71,6 +79,7 @@ public class SignUp {
 
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText("Well");
+                alert.setHeaderText("User added");
                 alert.setTitle("Correct");
                 alert.show();
 
